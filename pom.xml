@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.vlsystem</groupId>
-	<artifactId>cadastrousuario</artifactId>
+	<artifactId>cadastrarusuario</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cadastrarusuario</name>
 	<description> projeto cadastrar usuario</description>
