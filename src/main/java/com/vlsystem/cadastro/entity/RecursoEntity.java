@@ -1,6 +1,10 @@
-package com.example.cadastro.entity;
+package com.vlsystem.cadastro.entity;
 
 import java.util.Objects;
+
+import org.springframework.beans.BeanUtils;
+
+import com.vlsystem.cadastro.dto.RecursoDto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,6 +27,16 @@ public class RecursoEntity {
 	private String nome;
 	@Column(nullable = false)
 	private String chave;
+	
+	public RecursoEntity() {
+		
+	} 
+	//conversão do Entity para o DTO
+	public RecursoEntity(RecursoDto recurso) {
+		BeanUtils.copyProperties(recurso, this);
+		
+	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(chave, id);

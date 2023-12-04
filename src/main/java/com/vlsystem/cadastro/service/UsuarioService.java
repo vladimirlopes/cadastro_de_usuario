@@ -1,13 +1,13 @@
-package com.example.cadastro.service;
+package com.vlsystem.cadastro.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.cadastro.dto.UsuarioDto;
-import com.example.cadastro.entity.UsuarioEntity;
-import com.example.cadastro.repository.UsuarioRepository;
+import com.vlsystem.cadastro.dto.UsuarioDto;
+import com.vlsystem.cadastro.entity.UsuarioEntity;
+import com.vlsystem.cadastro.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {

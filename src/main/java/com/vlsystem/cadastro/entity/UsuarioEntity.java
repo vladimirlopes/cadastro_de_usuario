@@ -1,10 +1,10 @@
-package com.example.cadastro.entity;
+package com.vlsystem.cadastro.entity;
 
 import java.util.Objects;
 
 import org.springframework.beans.BeanUtils;
 
-import com.example.cadastro.dto.UsuarioDto;
+import com.vlsystem.cadastro.dto.UsuarioDto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,13 +32,13 @@ public class UsuarioEntity {
 	@Column(nullable = false)
 	private String email;
 
-	// conversão do DTO para ENTITY
-	public UsuarioEntity(UsuarioDto usuario) {
-		BeanUtils.copyProperties(usuario, this);
+	public UsuarioEntity() {
 
 	}
 
-	public UsuarioEntity() {
+	// conversão do Entity para DTO
+	public UsuarioEntity(UsuarioDto usuario) {
+		BeanUtils.copyProperties(usuario, this);
 
 	}
 
