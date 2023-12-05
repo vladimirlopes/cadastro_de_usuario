@@ -1,5 +1,9 @@
 package com.vlsystem.cadastro.entity;
 
+import org.springframework.beans.BeanUtils;
+
+import com.vlsystem.cadastro.dto.PerfilDto;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,5 +27,10 @@ public class PerfilEntity {
 	private Long id;
 	@Column(nullable = false)
 	private String descricao;
+	
+	public PerfilEntity(PerfilDto perfil) {
+		BeanUtils.copyProperties(perfil, this);
+		
+	}
 
 }
