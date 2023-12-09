@@ -2,9 +2,7 @@ package com.vlsystem.cadastro.entity;
 
 import org.springframework.beans.BeanUtils;
 
-import com.vlsystem.cadastro.dto.PerfilDto;
 import com.vlsystem.cadastro.dto.PerfilUsuarioDto;
-import com.vlsystem.cadastro.dto.UsuarioDto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
