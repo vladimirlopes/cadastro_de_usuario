@@ -1,5 +1,11 @@
 package com.vlsystem.cadastro.entity;
 
+import org.springframework.beans.BeanUtils;
+
+import com.vlsystem.cadastro.dto.PerfilDto;
+import com.vlsystem.cadastro.dto.PerfilUsuarioDto;
+import com.vlsystem.cadastro.dto.UsuarioDto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,7 +22,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Table(name = "SY_PERFIL_USUARIO")
-public class PerfilUsuario {
+public class PerfilUsuarioEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -28,5 +34,16 @@ public class PerfilUsuario {
 	@ManyToOne
 	@JoinColumn(name = "ID_PERFIL")
 	private PerfilEntity perfil;
+	
+	public PerfilUsuarioEntity(PerfilUsuarioDto perfilUsuario) {
+		BeanUtils.copyProperties(perfilUsuario, this);
+		if (perfilUsuario != null && perfilUsuario.getUsuario() != null) {
+			this.usuario = new UsuarioEntity(perfilUsuario.getUsuario());
+
+		}
+		if (perfilUsuario != null && perfilUsuario.getPerfil() != null) {
+			this.perfil = new PerfilEntity(perfilUsuario.getPerfil());
+		}
+	}
 
 }
