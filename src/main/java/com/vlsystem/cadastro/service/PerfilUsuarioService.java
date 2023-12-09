@@ -50,9 +50,9 @@ public class PerfilUsuarioService {
 	}
 
 	// READ
-	public PerfilUsuarioDto buscarPorId(Long id) {
+	/**public PerfilUsuarioDto buscarPorId(Long id) {
 		return new PerfilUsuarioDto(perfilUsuarioRepository.findById(id).get());
 
-	}
+	}*/
 
 }

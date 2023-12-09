@@ -49,8 +49,9 @@ public class UsuarioService {
 
 	// READ
 	// faz a busca do usuario por (id)
+	/**
 	public UsuarioDto buscarPorId(Long id) {
 		return new UsuarioDto(usuarioRepository.findById(id).get());
 
-	}
+	}*/
 }

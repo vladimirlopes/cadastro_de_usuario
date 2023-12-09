@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-@Table(name = "SY_PERFIIL")
+@Table(name = "SY_PERFIL")
 public class PerfilEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

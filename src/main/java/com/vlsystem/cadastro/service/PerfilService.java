@@ -39,9 +39,9 @@ public class PerfilService {
 		perfilRepository.delete(perfil);
 		
 	}
-	public PerfilDto buscarPorId(Long id) {
+	/**public PerfilDto buscarPorId(Long id) {
 		return new PerfilDto(perfilRepository.findById(id).get());
 		
 		
-	}
+	}*/
 }

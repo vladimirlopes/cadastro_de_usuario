@@ -44,8 +44,8 @@ public class RecursoService {
 	}
 
 	// faz a busca do recurso por (id)
-	public RecursoDto buscarPorId(Long id) {
+	/**public RecursoDto buscarPorId(Long id) {
 		return new RecursoDto(recursoRepository.findById(id).get());
 
-	}
+	}*/
 }
